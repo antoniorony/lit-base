@@ -32,6 +32,7 @@
   "author": "Google LLC",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@granite-elements/granite-lit-bootstrap": "^4.6.0-0",
     "lit": "^2.2.4"
   },
   "devDependencies": {
