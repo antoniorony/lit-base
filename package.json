@@ -3,11 +3,10 @@
   "private": true,
   "version": "1.0.4",
   "description": "A simple web component",
-  "main": "my-element.js",
-  "module": "my-element.js",
+  "module": "./src/my-element.js",
   "type": "module",
   "scripts": {
-    "build": "echo \"This is not a TypeScript project, so no need to build.\"",
+    "build": "webpack",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint '**/*.js'",
     "lint:lit-analyzer": "lit-analyzer my-element.js",
@@ -54,7 +53,9 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.73.0",
     "rollup-plugin-summary": "^1.4.3",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2"
   },
   "customElements": "custom-elements.json"
 }
