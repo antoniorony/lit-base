@@ -10,7 +10,13 @@ export class TecSlide extends LitElement {
     static get properties() {
       return {
         larguraSlide: { type: Number },
-        alturaSlide: { type: Number }
+        alturaSlide: { type: Number },
+        listaDeSlides: [
+          {
+            imagem: '',
+            titulo: ''
+          }
+        ]
       };
     }
 
