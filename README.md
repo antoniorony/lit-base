@@ -1,12 +1,14 @@
+# PROJETO BASE COM LITELEMENT E BOOTSTRAP
+
 # 🚀 Welcome to your new awesome project!
 
-This project has been created using **webpack-cli**, you can now run
+Este projeto utiliza **webpack-cli**, para rodá-lo pode usar:
 
 ```
 npm run build
 ```
 
-or
+ou
 
 ```
 yarn build
