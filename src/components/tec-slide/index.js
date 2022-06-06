@@ -9,14 +9,9 @@ export class TecSlide extends LitElement {
 
     static get properties() {
       return {
-        larguraSlide: { type: Number },
-        alturaSlide: { type: Number },
-        listaDeSlides: [
-          {
-            imagem: '',
-            titulo: ''
-          }
-        ]
+        largura: { type: Number },
+        altura: { type: Number },
+        listaDeSlides: []
       };
     }
 
@@ -24,8 +19,9 @@ export class TecSlide extends LitElement {
         super();
         this.activeSlide = '';
         this.urlImage = '';
-        this.alturaSlide = 300;
-        this.larguraSlide = 800;
+        this.altura = 0;
+        this.largura = 0;
+        this.listaDeSlides = [];
 
     }
 
@@ -91,11 +87,9 @@ export class TecSlide extends LitElement {
     }
   }
 
-    
-
     render() {
         return html`
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="width: 800px;">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="max-height: ${this.altura}px; max-width: ${this.largura}px;">
               <ol class="carousel-indicators">
                 <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
                 <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
@@ -103,21 +97,21 @@ export class TecSlide extends LitElement {
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item ${this.activeSlide} active" id="one">
-                  <img style="max-height: 500px" src="https://vaadin.com/static/content/learning-center/learn/tutorials/lit-element/images/lit-element-thumbnail.png" class="d-block w-100" alt="...">
+                  <img style="max-height: ${this.altura}px; max-width: ${this.largura}px; " src="https://vaadin.com/static/content/learning-center/learn/tutorials/lit-element/images/lit-element-thumbnail.png" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>First slide label</h5>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                   </div>
                 </div>
                 <div class="carousel-item ${this.activeSlide}" id="two">
-                  <img style="max-height: 500px" src="https://www.arsys.es/blog/file/uploads/2019/07/litelement.jpg" class="d-block w-100" alt="...">
+                  <img style="max-height: ${this.altura}px; max-width: ${this.largura}px; " src="https://www.arsys.es/blog/file/uploads/2019/07/litelement.jpg" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   </div>
                 </div>
                 <div class="carousel-item ${this.activeSlide}" id="three">
-                  <img style="max-height: 500px" src="https://dval.dev/_nuxt/image/56dbf8.png" class="d-block w-100" alt="...">
+                  <img style="max-height: ${this.altura}px; max-width: ${this.largura}px; " src="https://dval.dev/_nuxt/image/56dbf8.png" class="d-block w-100" alt="...">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Third slide label</h5>
                     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>

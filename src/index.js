@@ -1,1 +1,1 @@
-import './main-element.js';
+import './pages/home/index.js';
