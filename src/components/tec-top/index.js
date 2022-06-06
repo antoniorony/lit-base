@@ -6,9 +6,27 @@ export class TecTop extends LitElement {
         return [bootstrapStyles];
     }
 
+    static get properties() {
+        return {
+            urlLinkTopo: { type: String },
+            tipoTargetLinkTopo: { type: String },
+        };
+    }
+
+    constructor() {
+        super();
+        this.urlLinkTopo = '';
+        this.tipoTargetLinkTopo = '';
+    }
+
     render() {
         return html`
-            <h2>TEC.LIT-BASE<span class="badge"><H5>TECINOVA.NET</H5></span></h2>
+        <div class="d-flex justify-content-center">
+            <h3>Projeto base em lit element com bootstrap</h3>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a class="nav-link" aria-disabled="false" href="${this.urlLinkTopo}" target="${this.tipoTargetLinkTopo}">TECINOVA.NET</a>
+        </div>
         `;
     }
 }
